@@ -13,9 +13,11 @@ class CharactersCollectionViewController: UICollectionViewController {
     
    var charcters = CharacterStore().characters
     
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "Chines Translation"
+        self.title = "Chinese Translation"
         navigationController?.navigationBar.prefersLargeTitles = true
     }
     

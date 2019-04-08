@@ -43,6 +43,43 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		180C8A76225B8C4600F6DA83 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				184304112254344B000574EC /* TranslationViewController.swift */,
+				1843040922542CDB000574EC /* CharactersCollectionViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		180C8A77225B8C5A00F6DA83 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1843040B22542D4D000574EC /* CharacterCell.swift */,
+				1843040D2254304D000574EC /* Character.swift */,
+				1843040F2254305E000574EC /* CharacterStore.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		180C8A78225B8C6800F6DA83 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				184303FB22542C8B000574EC /* Main.storyboard */,
+				1843040022542C8C000574EC /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		180C8A79225B8C7500F6DA83 /* Supporting Files  */ = {
+			isa = PBXGroup;
+			children = (
+				184303F522542C8B000574EC /* AppDelegate.swift */,
+				184303FE22542C8C000574EC /* Assets.xcassets */,
+			);
+			path = "Supporting Files ";
+			sourceTree = "<group>";
+		};
 		184303E922542C8B000574EC = {
 			isa = PBXGroup;
 			children = (
@@ -62,15 +99,10 @@
 		184303F422542C8B000574EC /* Chinese Study */ = {
 			isa = PBXGroup;
 			children = (
-				184303F522542C8B000574EC /* AppDelegate.swift */,
-				184303FB22542C8B000574EC /* Main.storyboard */,
-				184304112254344B000574EC /* TranslationViewController.swift */,
-				1843040922542CDB000574EC /* CharactersCollectionViewController.swift */,
-				1843040B22542D4D000574EC /* CharacterCell.swift */,
-				1843040D2254304D000574EC /* Character.swift */,
-				1843040F2254305E000574EC /* CharacterStore.swift */,
-				184303FE22542C8C000574EC /* Assets.xcassets */,
-				1843040022542C8C000574EC /* LaunchScreen.storyboard */,
+				180C8A78225B8C6800F6DA83 /* View */,
+				180C8A76225B8C4600F6DA83 /* Controllers */,
+				180C8A77225B8C5A00F6DA83 /* Model */,
+				180C8A79225B8C7500F6DA83 /* Supporting Files  */,
 				1843040322542C8C000574EC /* Info.plist */,
 			);
 			path = "Chinese Study";

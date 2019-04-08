@@ -16,8 +16,12 @@ class TranslationViewController: UIViewController {
     @IBOutlet weak var pinyin: UILabel!
     @IBOutlet weak var englishTranslation: UILabel!
     
-    var charcter: Character?
-    
+    var charcter: Character? {
+        didSet {
+            navigationItem.title = charcter?.chineseCharcter
+        }
+    }
+
     //speech Sythesizer
     let sythesizer = AVSpeechSynthesizer()
     //Voice sythesizer
@@ -40,6 +44,7 @@ class TranslationViewController: UIViewController {
         sythesizer.speak(audio)
     }
     
+    //Read aloud button
     @IBAction func readAloud(_ sender: UIButton) {
         
         getVoice()
