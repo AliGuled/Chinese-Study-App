@@ -25,7 +25,8 @@ class TranslationViewController: UIViewController {
     //speech Sythesizer
     let sythesizer = AVSpeechSynthesizer()
     //Voice sythesizer
-    let voice = AVSpeechSynthesisVoice(language: "zh-CN")
+    let chineseVoice = AVSpeechSynthesisVoice(language: "zh-CN")
+    let englisVoice = AVSpeechSynthesisVoice(language: "en-US")
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,23 +34,37 @@ class TranslationViewController: UIViewController {
         chineseCharacter.text = charcter?.chineseCharcter
         pinyin.text = char.pinyin
         englishTranslation.text = char.englishTranslation
-        getVoice()
+        
     }
     
-    //Get the audio
-    func getVoice() {
+    //Get the chinese audio
+    func getChineseVoice() {
         guard let char = charcter else{return}
         let audio = AVSpeechUtterance(string: char.chineseCharcter)
-        audio.voice = voice
+        audio.voice = chineseVoice
         sythesizer.speak(audio)
     }
+    
+    func getEnglishVoice() {
+        
+        guard let englChar = charcter else {return}
+        let audio = AVSpeechUtterance(string: englChar.englishTranslation)
+        audio.voice = englisVoice
+        sythesizer.speak(audio)
+    }
+    
+    
     
     //Read aloud button
     @IBAction func readAloud(_ sender: UIButton) {
         
-        getVoice()
+        getChineseVoice()
     }
     
+    @IBAction func readEnglish(_ sender: UIButton) {
+        
+        getEnglishVoice()
+    }
     
 
 }
