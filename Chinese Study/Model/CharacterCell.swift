@@ -9,6 +9,8 @@
 import UIKit
 
 class CharacterCell: UICollectionViewCell {
+    
+    //character label
     @IBOutlet weak var characterLabel: UILabel!
     
 }

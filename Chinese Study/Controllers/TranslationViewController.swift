@@ -11,11 +11,15 @@ import AVFoundation
 
 class TranslationViewController: UIViewController {
     
+    //chinese character label
     @IBOutlet weak var chineseCharacter: UILabel!
     
+    //pinyin label
     @IBOutlet weak var pinyin: UILabel!
+    //Engilsh translation label
     @IBOutlet weak var englishTranslation: UILabel!
     
+    //computed charangter
     var charcter: Character? {
         didSet {
             navigationItem.title = charcter?.chineseCharcter
@@ -44,7 +48,7 @@ class TranslationViewController: UIViewController {
         audio.voice = chineseVoice
         sythesizer.speak(audio)
     }
-    
+    //Get the engilsh audio
     func getEnglishVoice() {
         
         guard let englChar = charcter else {return}
@@ -55,12 +59,13 @@ class TranslationViewController: UIViewController {
     
     
     
-    //Read aloud button
+    //Read aloud button for chinese voice
     @IBAction func readAloud(_ sender: UIButton) {
         
         getChineseVoice()
     }
     
+    //Read aloud button for engilsh voice
     @IBAction func readEnglish(_ sender: UIButton) {
         
         getEnglishVoice()

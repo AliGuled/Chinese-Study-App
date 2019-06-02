@@ -9,7 +9,7 @@
 import Foundation
 
 struct Character {
-    let chineseCharcter: String
-    let pinyin: String
-    let englishTranslation: String
+    let chineseCharcter: String // Chinese Character string
+    let pinyin: String // pinyin string
+    let englishTranslation: String // english translation string
 }

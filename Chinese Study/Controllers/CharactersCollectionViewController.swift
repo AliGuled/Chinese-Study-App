@@ -11,10 +11,12 @@ import UIKit
 
 class CharactersCollectionViewController: UICollectionViewController {
     
+     //Character store
    var charcters = CharacterStore().characters
     
 
     
+    //View did Load
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Chinese Translation"
