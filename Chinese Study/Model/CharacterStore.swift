@@ -11,6 +11,8 @@ class CharacterStore {
     
     var characters: [Character]
     
+    //English Chinse character translation word by word
+    
     init() {
         
         let snow = Character(chineseCharcter: "雪", pinyin: "Xuě", englishTranslation: "Snow")
